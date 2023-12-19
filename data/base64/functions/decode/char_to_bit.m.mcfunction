@@ -2,7 +2,7 @@
 # @input args
 #   elem: str
 # @output storage base64:decode
-#   twoBitList
+#   bitArray
 # @within function base64:decode/foreach_char
 
-$data modify storage base64:decode twoBitList append from storage base64:char_table r.$(elem)[]
+$data modify storage base64:decode bitArray append from storage base64:char_table r.$(elem)[]

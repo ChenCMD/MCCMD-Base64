@@ -2,24 +2,22 @@
 # @input args
 #   b64str: デコードするテキスト
 # @output storage returns:base64
-#   twoBitList: string[]
+#   bitArray: byte[]
 # @api
 
 #> Public
 # @within base64:decode/**
 #declare storage base64:decode
 
-# b64str => returns:str_utils chars
-$function str_utils:split/m {str: "$(b64str)"}
+# b64str => base64:decode chars
+$function base64:decode/split/m {str: "$(b64str)"}
 
-# returns:str_utils chars => base64:decode chars
-data modify storage base64:decode chars set from storage returns:str_utils chars
-
-# base64:decode chars => base64:decode twoBitList
+# base64:decode chars => base64:decode bitArray
+data modify storage base64:decode bitArray set value []
 function base64:decode/foreach_char
 
-# base64:decode twoBitList => returns:base64 twoBitList
-data modify storage returns:base64 twoBitList set from storage base64:decode twoBitList
+# base64:decode bitArray => returns:base64 bitArray
+data modify storage returns:base64 bitArray set from storage base64:decode bitArray
 # reset
 data remove storage returns:str_utils chars
-data remove storage base64:decode twoBitList
+data remove storage base64:decode bitArray
