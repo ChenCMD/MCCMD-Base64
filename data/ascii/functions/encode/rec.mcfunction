@@ -4,7 +4,7 @@
 # @within function ascii:encode/*
 
 # bit 配列の先頭 8 bit を結合した文字列を作成する
-# args:ascii bitArray[0:4] => ascii:encode byteStr
+# storage args:ascii bitArray[0:4] => storage ascii:encode byteStr
 data modify storage ascii:encode _.bit1 set from storage args:ascii bitArray[0]
 data modify storage ascii:encode _.bit2 set from storage args:ascii bitArray[1]
 data modify storage ascii:encode _.bit3 set from storage args:ascii bitArray[2]
@@ -17,7 +17,7 @@ function ascii:encode/concat_8bit with storage ascii:encode _
 data remove storage ascii:encode _
 
 # 8 bit 文字列から ASCII 文字を取得する
-# ascii:encode byteStr => ascii:encode char
+# storage ascii:encode byteStr => storage ascii:encode char
 data modify storage ascii:encode _.byteStr set from storage ascii:encode byteStr
 data remove storage ascii:encode byteStr
 function ascii:encode/bit_to_char.m with storage ascii:encode _
