@@ -5,7 +5,7 @@
 #   bitArray: byte[]
 # @api
 
-#> Public
+#> Private
 # @within base64:decode/**
 #declare storage base64:decode
 
