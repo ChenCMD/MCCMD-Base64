@@ -1,0 +1,2 @@
+#> minecraft:say
+$say >> $(msg)

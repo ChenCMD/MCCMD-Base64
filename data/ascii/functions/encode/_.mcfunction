@@ -16,8 +16,9 @@ data modify storage ascii:encode chars set value []
 function ascii:encode/rec
 
 # storage ascii:encode chars => storage returns:ascii string
-data modify storage returns:ascii string set value ""
-function ascii:encode/concat_chars
+data modify storage concat: args set from storage ascii:encode chars
+function concat:concat_all
+data modify storage returns:ascii string set from storage concat: result
 
 
 data remove storage args:ascii bitArray

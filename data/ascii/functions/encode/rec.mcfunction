@@ -5,15 +5,15 @@
 
 # bit 配列の先頭 8 bit を結合した文字列を作成する
 # args:ascii bitArray[0:4] => ascii:encode byteStr
-data modify storage ascii:encode _.str1 set from storage args:ascii bitArray[0]
-data modify storage ascii:encode _.str2 set from storage args:ascii bitArray[1]
-data modify storage ascii:encode _.str3 set from storage args:ascii bitArray[2]
-data modify storage ascii:encode _.str4 set from storage args:ascii bitArray[3]
-data modify storage ascii:encode _.str5 set from storage args:ascii bitArray[4]
-data modify storage ascii:encode _.str6 set from storage args:ascii bitArray[5]
-data modify storage ascii:encode _.str7 set from storage args:ascii bitArray[6]
-data modify storage ascii:encode _.str8 set from storage args:ascii bitArray[7]
-function ascii:encode/concat/unsafe_8 with storage ascii:encode _
+data modify storage ascii:encode _.bit1 set from storage args:ascii bitArray[0]
+data modify storage ascii:encode _.bit2 set from storage args:ascii bitArray[1]
+data modify storage ascii:encode _.bit3 set from storage args:ascii bitArray[2]
+data modify storage ascii:encode _.bit4 set from storage args:ascii bitArray[3]
+data modify storage ascii:encode _.bit5 set from storage args:ascii bitArray[4]
+data modify storage ascii:encode _.bit6 set from storage args:ascii bitArray[5]
+data modify storage ascii:encode _.bit7 set from storage args:ascii bitArray[6]
+data modify storage ascii:encode _.bit8 set from storage args:ascii bitArray[7]
+function ascii:encode/concat_8bit with storage ascii:encode _
 data remove storage ascii:encode _
 
 # 8 bit 文字列から ASCII 文字を取得する
@@ -25,6 +25,8 @@ data remove storage ascii:encode _
 
 # 取得した ASCII 文字列が ignoreChars に含まれているかを確認する
 data modify storage ascii:encode _.char set from storage ascii:encode char
+execute if data storage ascii:encode _{char:"\\"} run data modify storage ascii:encode _.char set value "\\\\"
+execute if data storage ascii:encode _{char:"\""} run data modify storage ascii:encode _.char set value "\\\""
 function ascii:encode/is_contained_ignore_chars with storage ascii:encode _
 data remove storage ascii:encode _
 

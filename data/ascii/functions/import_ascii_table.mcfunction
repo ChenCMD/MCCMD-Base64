@@ -39,7 +39,7 @@ data modify storage ascii:char_table _.00011111 set value ""
 
 data modify storage ascii:char_table _.00100000 set value " "
 data modify storage ascii:char_table _.00100001 set value "!"
-data modify storage ascii:char_table _.00100010 set value '\\"'
+data modify storage ascii:char_table _.00100010 set value '"'
 data modify storage ascii:char_table _.00100011 set value "#"
 data modify storage ascii:char_table _.00100100 set value "$"
 data modify storage ascii:char_table _.00100101 set value "%"
@@ -100,7 +100,7 @@ data modify storage ascii:char_table _.01011000 set value "X"
 data modify storage ascii:char_table _.01011001 set value "Y"
 data modify storage ascii:char_table _.01011010 set value "Z"
 data modify storage ascii:char_table _.01011011 set value "["
-data modify storage ascii:char_table _.01011100 set value "\\\\"
+data modify storage ascii:char_table _.01011100 set value "\\"
 data modify storage ascii:char_table _.01011101 set value "]"
 data modify storage ascii:char_table _.01011110 set value "^"
 data modify storage ascii:char_table _.01011111 set value "_"

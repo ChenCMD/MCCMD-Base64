@@ -7,4 +7,4 @@
 #     ignoreChars に含まれているか否か
 # @within function ascii:encode/rec
 
-$execute store success storage ascii:encode isContained byte 1 if data storage args:ascii {ignoreChars:['$(char)']}
+$execute store success storage ascii:encode isContained byte 1 if data storage args:ascii {ignoreChars:["$(char)"]}
