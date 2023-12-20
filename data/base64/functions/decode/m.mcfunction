@@ -19,5 +19,4 @@ function base64:decode/foreach_char
 # base64:decode bitArray => returns:base64 bitArray
 data modify storage returns:base64 bitArray set from storage base64:decode bitArray
 # reset
-data remove storage returns:str_utils chars
 data remove storage base64:decode bitArray
