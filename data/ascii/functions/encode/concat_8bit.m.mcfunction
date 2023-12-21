@@ -1,4 +1,4 @@
-#> ascii:encode/concat_8bit
+#> ascii:encode/concat_8bit.m
 # @input args
 #   bit1: byte
 #   bit2: byte

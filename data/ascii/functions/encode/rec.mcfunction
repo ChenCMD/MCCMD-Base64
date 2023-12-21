@@ -13,7 +13,7 @@ data modify storage ascii:encode _.bit5 set from storage args:ascii bitArray[4]
 data modify storage ascii:encode _.bit6 set from storage args:ascii bitArray[5]
 data modify storage ascii:encode _.bit7 set from storage args:ascii bitArray[6]
 data modify storage ascii:encode _.bit8 set from storage args:ascii bitArray[7]
-function ascii:encode/concat_8bit with storage ascii:encode _
+function ascii:encode/concat_8bit.m with storage ascii:encode _
 data remove storage ascii:encode _
 
 # 8 bit 文字列から ASCII 文字を取得する
@@ -27,7 +27,7 @@ data remove storage ascii:encode _
 data modify storage ascii:encode _.char set from storage ascii:encode char
 execute if data storage ascii:encode _{char:"\\"} run data modify storage ascii:encode _.char set value "\\\\"
 execute if data storage ascii:encode _{char:"\""} run data modify storage ascii:encode _.char set value "\\\""
-function ascii:encode/is_contained_ignore_chars with storage ascii:encode _
+function ascii:encode/is_contained_ignore_chars.m with storage ascii:encode _
 data remove storage ascii:encode _
 
 # 取得した ASCII 文字列が ignoreChars に含まれていなければ chars に追加する

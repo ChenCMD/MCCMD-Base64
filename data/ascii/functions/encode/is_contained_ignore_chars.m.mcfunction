@@ -1,4 +1,4 @@
-#> ascii:encode/is_contained_ignore_chars
+#> ascii:encode/is_contained_ignore_chars.m
 # @input args
 #   char: str
 #     文字
