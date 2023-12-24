@@ -26,3 +26,4 @@ data modify storage returns:ascii string set from storage concat: result
 # リセット
 data remove storage args:ascii bitArray
 data remove storage args:ascii ignoreChars
+data remove storage ascii:encode chars

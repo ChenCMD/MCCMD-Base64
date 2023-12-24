@@ -19,9 +19,12 @@ function base64:decode/split
 # storage base64:decode chars => storage base64:decode bitArray
 data modify storage base64:decode bitArray set value []
 function base64:decode/foreach_char
+data remove storage base64:decode args
 
 # storage base64:decode bitArray => storage returns:base64 bitArray
 data modify storage returns:base64 bitArray set from storage base64:decode bitArray
 
 # リセット
+data remove storage base64:decode str
+data remove storage base64:decode chars
 data remove storage base64:decode bitArray
